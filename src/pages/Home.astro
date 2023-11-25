@@ -1,0 +1,86 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MainImage from "../assets/main-portfolio.svg";
+import { Image } from "astro:assets";
+---
+
+<Layout title="Home">
+  <main
+    class="flex flex-col relative h-screen w-screen overflow-hidden bg-light-yellow"
+  >
+    <header
+      class="flex flex-grow pt-4 justify-center lg:justify-end lg:pe-24 z-40"
+    >
+      <nav>
+        <ul
+          class="flex [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:text-1xl [&>li>a]:lg:text-2xl [&>li>a]:font-bold"
+        >
+          <li><a class="deep-purple" href="./Home">HOME</a></li>
+          <li><a class="light-purple" href="./About">ABOUT</a></li>
+          <li><a class="light-purple" href="./Work">WORK</a></li>
+          <li><a class="light-purple" href="./Contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-------------------------------------------------------------------------->
+
+    <div class="flex justify-center relative h-screen w-auto">
+      <img
+        src={MainImage.src}
+        alt="Portfolio Main Image"
+        class="absolute top-[25%] lg:top-[15%] bottom-0 w-auto h-[50%] lg:h-[70%]"
+      />
+    </div>
+
+    <!-------------------------------------------------------------------------->
+
+    <footer class="flex flex-grow justify-center lg:justify-end lg:pe-24 pb-5">
+      <ul class="flex [&>li>a]:inline-block [&>li>a]:px-2">
+        <li>
+          <a href="#">
+            <Image
+              src="/linkedin-icon.svg"
+              alt="LinkedIn"
+              width={40}
+              height={40}
+              class="hover:scale-125 hover:transition hover:delay-75 transition delay-75"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><Image
+              src="/insta-icon.svg"
+              alt="Insta"
+              width={40}
+              height={40}
+              class="hover:scale-125 hover:transition hover:delay-75 transition delay-75"
+            /></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><Image
+              src="/behance-icon.svg"
+              alt="BeHance"
+              width={40}
+              height={40}
+              class="hover:scale-125 hover:transition hover:delay-75 transition delay-75"
+            /></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><Image
+              src="/mail-icon.svg"
+              alt="E-mail"
+              width={40}
+              height={40}
+              class="hover:scale-125 hover:transition hover:delay-75 transition delay-75"
+            /></a
+          >
+        </li>
+      </ul>
+    </footer>
+  </main>
+</Layout>

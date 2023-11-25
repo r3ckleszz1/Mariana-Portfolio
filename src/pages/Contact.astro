@@ -1,0 +1,148 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+---
+
+<Layout title="Mi Trabajo">
+  <main class="w-full h-screen flex-col flex">
+    <!--------------------------------------------------------------------------------------- -->
+
+    <header
+      class="flex flex-grow pt-4 justify-center lg:justify-end lg:pe-24 z-40"
+    >
+      <nav>
+        <ul
+          class="flex [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:text-1xl [&>li>a]:lg:text-2xl [&>li>a]:font-bold"
+        >
+          <li><a class="light-purple" href="./Home">HOME</a></li>
+          <li><a class="light-purple" href="./About">ABOUT</a></li>
+          <li><a class="light-purple" href="./Work">WORK</a></li>
+          <li><a class="deep-purple" href="./Contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!--------------------------------------------------------------------------------------- -->
+
+    <section class="lg:px-24 px-5 mt-10 mb-10 flex-grow">
+      <div
+        class="flex flex-col w-full bg-[#6340DD] rounded-3xl
+         px-5 py-10 lg:px-24 lg:py-14 text-white lg:text-start text-center"
+      >
+        <form>
+          <h2
+            class="poppins font-bold text-2xl lg:text-3xl pb-5 lg:text-start text-center"
+          >
+            Contáctame
+          </h2>
+          <p class="font-medium text-xl lg:text-2xl mb-10">
+            Si quieres ponerte en contacto conmigo, solo debes rellenar este
+            pequeño formulario o buscarme a través de mis redes sociales en la
+            parte inferior de esta página.
+          </p>
+          <div class="">
+            <div
+              id="container-contacto"
+              class="grid lg:grid-cols-2 gap-5 lg:gap-5 lg:mb-5"
+            >
+              <div id="nombre">
+                <input
+                  type="text"
+                  name="Nombre"
+                  id="nombre-contacto"
+                  placeholder="Nombre"
+                  class="lg:text-2xl text-xl font-medium text-black w-full py-2 text-center
+                   placeholder:text-black active:bg-white bg-[#D1C6F5]
+                   focus:bg-white border-none focus:border-none rounded"
+                />
+              </div>
+              <div id="correo">
+                <input
+                  type="email"
+                  name="Correo"
+                  id="correo-contacto "
+                  placeholder="Correo"
+                  class="text-xl lg:text-2xl font-medium text-black
+                  w-full py-2 text-center mb-5 placeholder:text-black active:bg-white
+                   bg-[#D1C6F5]
+                   focus:bg-white border-none focus:border-none rounded"
+                />
+              </div>
+            </div>
+            <div id="razon-contacto">
+              <input
+                type="text"
+                name="Razon"
+                id="razon-de-contacto"
+                placeholder="Aquí puedes explicar tu razón de contacto o escribir un mensaje"
+                class="w-full h-48 py-8 px-5 text-black mb-10
+                 placeholder:text-black lg:text-2xl text-xl font-medium bg-[#D1C6F5]
+                  focus:bg-white"
+              />
+            </div>
+          </div>
+          <button
+            class="poppins text-3xl font-bold text-white border-[#DF432B] border-solid rounded-md text-center w-full border-4 py-2 hover:bg-[#DF432B]
+             hover:transition-colors hover:delay-300 transition-colors delay-300"
+            type="submit">ENVIAR</button
+          >
+        </form>
+      </div>
+    </section>
+
+    <!--------------------------------------------------------------------------------------- -->
+    <footer class="">
+      <div
+        class="flex flex-grow justify-center lg:justify-end lg:pe-24 pb-5 pt-5"
+      >
+        <ul class="flex [&>li>a]:inline-block [&>li>a]:px-2">
+          <li>
+            <a href="#">
+              <Image
+                src="/linkedin-icon.svg"
+                alt="LinkedIn"
+                width={40}
+                height={40}
+                class="hover:scale-125 hover:transition hover:delay-75 transition delay-75 scale-75 xl:scale-100"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#"
+              ><Image
+                src="/insta-icon.svg"
+                alt="Insta"
+                width={40}
+                height={40}
+                class="hover:scale-125 hover:transition hover:delay-75 transition delay-75 scale-75 xl:scale-100"
+              /></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><Image
+                src="/behance-icon.svg"
+                alt="BeHance"
+                width={40}
+                height={40}
+                class="hover:scale-125 hover:transition hover:delay-75 transition delay-75 scale-75 xl:scale-100"
+              /></a
+            >
+          </li>
+          <li>
+            <a href="#"
+              ><Image
+                src="/mail-icon.svg"
+                alt="E-mail"
+                width={40}
+                height={40}
+                class="hover:scale-125 hover:transition hover:delay-75 transition delay-75 scale-75 xl:scale-100"
+              /></a
+            >
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    <!--------------------------------------------------------------------------------------- -->
+  </main>
+</Layout>

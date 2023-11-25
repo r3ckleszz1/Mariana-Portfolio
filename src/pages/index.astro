@@ -1,0 +1,102 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Main from "../assets/main-portfolio.svg";
+import { Image } from "astro:assets";
+---
+
+<Layout title="Portfolio Mariana">
+  <main>
+    <header class="">
+      <nav id="NavBar">
+        <div
+          class="flex flex-grow lg:justify-end lg:pe-40 justify-center py-10"
+        >
+          <ul
+            class="flex [&>li>a]:text-1 [&>li>a]:px-2 light-purple font-bold [&>li>a]:lg:text-2xl"
+          >
+            <li>
+              <a class="deep-purple" href="./Home">HOME</a>
+            </li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">WORK</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <div class="flex relative justify-center h-screen w-auto">
+      <img
+        src={Main.src}
+        alt="main"
+        class="w-auto h-[30%] lg:h-[60%] absolute top-0 bottom-0"
+      />
+    </div>
+
+    <footer class="">
+      <div class="flex flex-grow justify-center lg:justify-end lg:pe-40 pb-10">
+        <ul class="flex">
+          <li>
+            <a class="" href="#">
+              <Image
+                src="/linkedin-icon.svg"
+                alt="icon"
+                width={40}
+                height={40}
+                class="hover:scale-125"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <Image
+                src="/insta-icon.svg"
+                alt="icon"
+                width={40}
+                height={40}
+                class="hover:scale-125"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <Image
+                src="/behance-icon.svg"
+                alt="icon"
+                width={40}
+                height={40}
+                class="hover:scale-125"
+              />
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <Image
+                src="/mail-icon.svg"
+                alt="icon"
+                width={40}
+                height={40}
+                class="hover:scale-125"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+    <div class="flex"></div>
+  </main>
+</Layout>
+
+<!-----------------------------------------<section>
+      <div class="flex relative h-screen w-screen justify-center">
+        <img
+          src={astroImage.src}
+          alt="main"
+          class="w-auto h-[70%] absolute top-0 bottom-0 hover:scale-125 hover"
+        />
+        
+      </div>
+    </section> -->
+
+<!--<Image src={astroImage} alt="main " />-->
+<!----------------------------------------- -->

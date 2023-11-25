@@ -1,0 +1,145 @@
+---
+import Layout from "../layouts/Layout.astro";
+import AboutMain from "../assets/about-main.png";
+import AboutBg from "../assets/about-bg.png";
+import { Image } from "astro:assets";
+---
+
+<Layout title="About Me">
+  <main
+    class="xl:h-screen xl:w-screen overflow-x-hidden relative flex flex-col"
+  >
+    <!---------------------------------------------------------------------- -->
+
+    <img
+      src={AboutBg.src}
+      alt=""
+      class="xl:bg-cover bg-contain -z-10 opacity-30 absolute top-0 xl:h-screen xl:w-screen"
+    />
+
+    <!----------------------------------------------------------------------------- -->
+
+    <header
+      class="flex flex-grow pt-4 justify-center lg:justify-end lg:pe-24 z-40"
+    >
+      <nav>
+        <ul
+          class="flex [&>li>a]:inline-block [&>li>a]:px-2 [&>li>a]:text-1xl [&>li>a]:lg:text-2xl [&>li>a]:font-bold"
+        >
+          <li><a class="light-purple" href="./Home">HOME</a></li>
+          <li><a class="deep-purple" href="./About">ABOUT</a></li>
+          <li><a class="light-purple" href="./Work">WORK</a></li>
+          <li><a class="light-purple" href="./Contact">CONTACT</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!----------------------------------------------------------------------------- -->
+
+    <section class="flex flex-grow w-full h-full justify-center px-5 xl:px-24">
+      <div class="grid gap-5 grid-cols-12 mt-5 xl:mt-0">
+        <div
+          class="col-span-12 pe-5 2xl:col-span-6 flex flex-col
+           justify-center align-baseline h-full mb-5"
+        >
+          <h2
+            class="lg:text-5xl xl:text-start text-center text-3xl font-bold poppins main-orange mb-5"
+          >
+            !Hola!, bienvenido a mi portafolio.
+          </h2>
+          <p
+            class="font-medium xl:text-xl text-lg mb-5 xl:text-start text-center"
+          >
+            Soy Mariana, diseñadora textil y de vestuario. Estoy muy contenta de
+            presentar mi trabajo por este medio digital, espero te guste y se
+            pueda reflejar mi pasión por el diseño, la moda y el arte.
+          </p>
+          <p
+            class="font-medium text-lg xl:text-xl mb-5 xl:text-start text-center"
+          >
+            Estudio diseño en la universidad de Valparaíso, donde me he
+            capacitado y especializado en el diseño textil. Con gran foco en la
+            moda, tendencias e historia, intentando aplicar influencias del
+            arte, la arquitectura y, por su puesto, la ergonomía y
+            funcionalidad.
+          </p>
+          <p class="font-medium text-lg xl:text-xl xl:text-start text-center">
+            Dentro de mis actividades relevantes, estan los trabajos que he
+            realizado para mi formación académica y también destaco mi
+            participacipación en un proyecto para Bienalsur, en Buenos Aires,
+            que me entregó mucha experiencia como diseñadora.
+          </p>
+        </div>
+        <div
+          class="col-span-12 2xl:col-span-6 flex justify-center align-middle mb-5 lg:mb-0"
+        >
+          <img
+            src={AboutMain.src}
+            alt="About main image"
+            class="max-w-full h-auto xl:w-[700px] xl:h-[540px] self-center"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!----------------------------------------------------------------------------- -->
+
+    <footer
+      class="flex flex-grow justify-center lg:justify-end lg:pe-24 pb-5 pt-5"
+    >
+      <ul class="flex [&>li>a]:inline-block [&>li>a]:px-2">
+        <li>
+          <a href="#">
+            <Image
+              src="/linkedin-icon.svg"
+              alt="LinkedIn"
+              width={40}
+              height={40}
+              class="hover:scale-125 hover:transition hover:delay-75 transition delay-75 scale-75 xl:scale-100"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="#"
+            ><Image
+              src="/insta-icon.svg"
+              alt="Insta"
+              width={40}
+              height={40}
+              class="hover:scale-125 hover:transition hover:delay-75 transition delay-75 scale-75 xl:scale-100"
+            /></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><Image
+              src="/behance-icon.svg"
+              alt="BeHance"
+              width={40}
+              height={40}
+              class="hover:scale-125 hover:transition hover:delay-75 transition delay-75 scale-75 xl:scale-100"
+            /></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><Image
+              src="/mail-icon.svg"
+              alt="E-mail"
+              width={40}
+              height={40}
+              class="hover:scale-125 hover:transition hover:delay-75 transition delay-75 scale-75 xl:scale-100"
+            /></a
+          >
+        </li>
+      </ul>
+    </footer>
+
+    <!----------------------------------------------------------------------------- -->
+  </main>
+</Layout>
+
+<style>
+  main {
+  }
+</style>
